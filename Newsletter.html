@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter</title>
+    <link rel="stylesheet" href="output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      .circle-left{
+        height: 1500px;
+        width: 1500px;
+        left: -750px;
+        top: -250px;
+      }
+      .circle-right{
+        height: 1000px;
+        width: 100px;
+        left: -500px;
+        top: -500px;
+      }
+    </style>
+</head>
+<body>
+  <!--Background creation-->
+    <div class="h-screen relative bg-gradient-to-br from-indigo-700 to bg-green-500 overflow-hidden">
+      <div class="absolute bg-gradient-to-br h-full rounded-full bg-white/30 blur-2xl circle-left"></div>
+      <div class="absolute bg-gradient-to-br h-full rounded-full bg-white/30 blur-2xl circle-right"></div>
+
+      <div class="absolute w-96 h-96  backdrop-blur-sm bg-white/30 rounded-full z-9 top-1/2 right-1/2"></div>
+      <div class="absolute w-72 h-72  backdrop-blur-sm bg-white/30 rounded-full z-9 bottom-1/2 left-1/2"></div>
+      <div class="absolute w-16 h-16  backdrop-blur-sm bg-white/30 rounded-full z-9 inset-y-2/4 inset-x-3/4"></div>
+      <div class="absolute top-0 w-full h-screen backdrop-blur-sm bg-gradient-to-br to-green-500/30 from-indigo-700/40"></div>
+    </div>
+    <!--background creation stop-->
+    <!--form creation-->
+    <div class="w-11/12 md:w-3/6 2xl:w-2/6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 backdrop-blur-xl bg-white/30 rounded-lg md:p-20 p-10">
+      <i class="fa fa-comment" style="font-size:40px"></i>
+      <h1 class="text-white font-semibold text-3xl mb-2">
+        Subscribe for latest updates
+      </h1>
+      <p class="text-white text-xl mb-5 w-3/4 ">
+        Get quality updates with your subscriptons
+      </p>
+      <form action="#" method="get" class="flex items-center relative">
+        <input
+        type="email"
+        placeholder="enter your email..."
+        class="placeholder:text-gray-300 text-white focus:border-green-500 w-full form-input px-4 py-3 rounded-md bg-transparent border border-white/30">
+        <button class="font-semibold rounded-md px-5 absolute right-0 h-full text-white bg-gradient-to-br to-green-500 from-indigo-700">
+          Subscribe
+        </button>
+      </form>
+    </div>
+    <!--form creation end-->
+</body>
+</html> 
