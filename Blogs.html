@@ -5,31 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>category</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!--Blogs category creation-->
     <div class="bg-teal-800">
-      <div class="flex justify-between items-center p-6 px-6 lg:px-0 container mx-auto">
-        <!--logo-->
-        <div class=" font-bold uppercase text-white text-3xl">Nara's <span style="color: rgb(5, 164, 111);">Farm</span></div>
-        <!--Hamburger-->
-        <input class="peer hidden" type="checkbox" name="hamburger" id="hamburger"> 
-        <label class="peer-checked:hamburger block relative cursor-pointer lg:hidden border-2 border-gray-300 peer-checked:border-2 peer-checked:border-white p-3 rounded-md transition-all" for="hamburger">
-          <div class="m-auto w-6 h-0.5 rounded bg-gray-300 transition-all duration-300 "></div>
-          <div class="m-auto mt-2 w-6 h-0.5 rounded bg-gray-300 transition-all duration-300 "></div>
-        </label>
-        <!--Menu navbar-->
-        <div class="-translate-y-full peer-checked:translate-y-0 lg:translate-y-0 inset-0  lg:static pt-20 lg:pt-0 lg:bg-transparent -z-5 lg:z-10 lg:h-auto lg:w-auto transition-all duration-300 ease-in-out">
-          <div class="bg-teal-800 shadow-md lg:bg-transparent lg:shadow-none static py-10 lg:py-0 flex flex-col lg:items-center lg:flex-row px-6 space-y-4 lg:space-y-0 lg:space-x-12">
-            <a class="text-white transition-all" href="index.html">Home</a>
-            <a class="text-white transition-all" href="Blogs.html">Blogs</a>
-            <a class="text-white transition-all" href="Newsletter.html">Newsletter</a>
-          </div>
+      <nav class="flex justify-between items-center w-[92%] mx-auto">
+        <div class="w-16 font-bold uppercase text-white text-3xl">Nara's<span style="color: rgb(5, 164, 111);">Farm</span></div>
+        <div class="nav-links duration-500 md:static md:min-h-fit absolute  min-h-[7vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+          <ul class=" flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-2">
+            <li> 
+              <a class="hover:text-emerald-500" href="index.html">Home</a>
+            </li>
+            <li>
+              <a class="hover:text-emerald-500" href="Blogs.html">Blogs</a>
+            </li>
+            <li>
+              <a class="hover:text-emerald-400" href="Newsletter.html">Newsletter</a>
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="flex items-center gap-6">
+          <button class="bg-emerald-400 text-white px-5 py-2 rounded-full hover:bg-lime-500">Learn More</button>
+          <i class="fa fa-bars  text-3xl cursor-pointer md:hidden" onclick="ontoggleMenu(this)"name="bars"></i>
+        </div>
+      </nav>
+     
     </div>
     <div class="bg-teal-800 ">
-        <h1 class="text-lime-500 font-mono font-large flex justify-center text-3xl gap-y-10 pt-6 md:text-4xl ">LATEST UPLOADS</h3>
+        <h1 class="text-lime-500 font-mono font-large flex justify-center text-3xl gap-y-10 pt-20 md:text-4xl ">LATEST UPLOADS</h3>
         <!--using grid-->
         <div class="flex items-center justify-center min-h-screen container mx-auto">
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -143,5 +147,12 @@
                     </div>
           </div>
           <!--end of blogs category creation-->
+          <script>
+            const navlinks = document.querySelector('.nav-links')
+          function ontoggleMenu(e){
+            e.name = e.name=== 'bars' ? 'close' : 'bars'
+            navlinks.classList.toggle('top-[9%]')
+          }
+          </script>
 </body>
 </html>
